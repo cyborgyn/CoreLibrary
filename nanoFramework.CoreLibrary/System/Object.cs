@@ -22,6 +22,13 @@ namespace System
         {
         }
 
+        /// <summary>
+        /// Destructor
+        /// </summary>
+        ~Object()
+        {
+        }
+
 #if NANOCLR_REFLECTION
 
         /// <summary>
