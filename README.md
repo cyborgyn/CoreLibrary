@@ -1,24 +1,21 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nanoframework_lib-CoreLibrary&metric=alert_status)](https://sonarcloud.io/dashboard?id=nanoframework_lib-CoreLibrary) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=nanoframework_lib-CoreLibrary&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=nanoframework_lib-CoreLibrary) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![NuGet](https://img.shields.io/nuget/dt/nanoFramework.CoreLibrary.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.CoreLibrary/) [![#yourfirstpr](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://github.com/nanoframework/Home/blob/main/CONTRIBUTING.md) 
-[![Discord](https://img.shields.io/discord/478725473862549535.svg?logo=discord&logoColor=white&label=Discord&color=7289DA)](https://discord.gg/gCyBu8T)
+# Welcome to the **nanoFramework** Base Class Library for IL2C repository!
 
-![nanoFramework logo](https://github.com/nanoframework/Home/blob/main/resources/logo/nanoFramework-repo-logo.png)
-
------
-
-# Welcome to the **nanoFramework** Base Class Library repository!
-
-## Build status
-
-| Component | Build Status | NuGet Package |
-|:-|---|---|
-| Base Class Library | [![Build Status](https://dev.azure.com/nanoframework/CoreLibrary/_apis/build/status/nanoframework.CoreLibrary?repoName=nanoframework%2FCoreLibrary&branchName=main)](https://dev.azure.com/nanoframework/CoreLibrary/_build/latest?definitionId=24&repoName=nanoframework%2FCoreLibrary&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.CoreLibrary.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.CoreLibrary/)  |
-| Base Class Library w/o reflection | [![Build Status](https://dev.azure.com/nanoframework/CoreLibrary/_apis/build/status/nanoframework.CoreLibrary?repoName=nanoframework%2FCoreLibrary&branchName=main)](https://dev.azure.com/nanoframework/CoreLibrary/_build/latest?definitionId=24&repoName=nanoframework%2FCoreLibrary&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.CoreLibrary.NoReflection.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.CoreLibrary.NoReflection/) |
-| Base Class Library (preview) | [![Build Status](https://dev.azure.com/nanoframework/CoreLibrary/_apis/build/status/nanoframework.CoreLibrary?repoName=nanoframework%2FCoreLibrary&branchName=develop)](https://dev.azure.com/nanoframework/CoreLibrary/_build/latest?definitionId=24&repoName=nanoframework%2FCoreLibrary&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.CoreLibrary.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.CoreLibrary/) |
-| Base Class Library w/o reflection (preview) | [![Build Status](https://dev.azure.com/nanoframework/CoreLibrary/_apis/build/status/nanoframework.CoreLibrary?repoName=nanoframework%2FCoreLibrary&branchName=develop)](https://dev.azure.com/nanoframework/CoreLibrary/_build/latest?definitionId=24&repoName=nanoframework%2FCoreLibrary&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.CoreLibrary.NoReflection.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.CoreLibrary.NoReflection/)  |
+This is a special fork of nanoFramework's BCL, to compile with [IL2C](https://github.com/cyborgyn/IL2C/tree/feature/implement-ilcodes), and extend IL2C.Runtime with the required classes, functions.
 
 ## BCL Flavours
 
 The .NET **nanoFramework** Base Class Library is provided in two flavours: with or without support for System.Reflection namespace. The reason for this is that the reflection API adds up a significant size to the DLL and image size. For targets with smaller flash this can be prohibitive.
+
+To Compile with IL2C, only the reflectionless flavor is in focus currently.
+
+## Getting started
+
+* You will need the VisualStudio Extension of nanoFramework, to be able to open this solution
+* Compile it
+* Use the in-dev version of [IL2C](https://github.com/cyborgyn/IL2C/tree/feature/implement-ilcodes) to transpile the mscorlib.dll to C source code
+* Copy the source code into IL2C.Runtime (work in progress)
+* Set the C compiler to provide EXTCORLIB definition
+* Recompile IL2C.Runtime with ./build-runtime.sh (work in progress)
 
 ## Unit Test
 
