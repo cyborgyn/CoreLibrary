@@ -36,13 +36,13 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE;NANOCLR_APPDOMAINS</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <DefineConstants>$(DefineConstants);TRACE;NANOCLR_APPDOMAINS</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -94,7 +94,7 @@
     <Compile Include="..\nanoFramework.CoreLibrary\System\DateTime.cs" Link="System\DateTime.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\DayOfWeek.cs" Link="System\DayOfWeek.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\DBNull.cs" Link="System\DBNull.cs" />
-    <Compile Include="..\nanoFramework.CoreLibrary\System\Delegate.cs" Link="System\v.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Delegate.cs" Link="System\Delegate.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Diagnostics\ConditionalAttribute.cs" Link="System\Diagnostics\ConditionalAttribute.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Diagnostics\Debug.cs" Link="System\Diagnostics\Debug.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Diagnostics\Debugger.cs" Link="System\Diagnostics\Debugger.cs" />
@@ -213,6 +213,12 @@
     <Compile Include="..\nanoFramework.CoreLibrary\System\UInt32.cs" Link="System\UInt32.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\UInt64.cs" Link="System\UInt64.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\UIntPtr.cs" Link="System\UIntPtr.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\UnhandledExceptionEventArgs.cs">
+      <Link>System\UnhandledExceptionEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\nanoFramework.CoreLibrary\System\UnhandledExceptionEventHandler.cs">
+      <Link>System\UnhandledExceptionEventHandler.cs</Link>
+    </Compile>
     <Compile Include="..\nanoFramework.CoreLibrary\System\ValueType.cs" Link="System\ValueType.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Version.cs" Link="System\Version.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Void.cs" Link="System\Void.cs" />
@@ -393,9 +399,6 @@
   <ItemGroup>
     <None Include="..\nanoFramework.CoreLibrary\key.snk" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="System\" />
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
   <ProjectExtensions>

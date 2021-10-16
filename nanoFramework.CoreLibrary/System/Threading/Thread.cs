@@ -16,7 +16,7 @@ namespace System.Threading
     {
         // these fields are required in the native end
 #pragma warning disable 0169
-        private Delegate _delegate;
+        private Delegate start__;
         private int _priority;
         [Reflection.FieldNoReflection]
         private object _thread;

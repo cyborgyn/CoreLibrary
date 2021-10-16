@@ -31,6 +31,7 @@ namespace System
 
         private object _appDomain;
         private string _friendlyName;
+        private UnhandledExceptionEventHandler unhandledExceptionEventHandler__;
 #pragma warning restore 0649
 #pragma warning restore 0169
 
@@ -48,6 +49,23 @@ namespace System
         /// <returns>The newly created application domain.</returns>
         [MethodImpl(MethodImplOptions.InternalCall)]
         public static extern AppDomain CreateDomain(String friendlyName);
+
+        /// <summary>
+        /// UnhandledException event for current AppDomain
+        /// </summary>
+        public event UnhandledExceptionEventHandler UnhandledException
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            add
+            {
+                this.unhandledExceptionEventHandler__ = (UnhandledExceptionEventHandler)Delegate.Combine((Delegate)this.unhandledExceptionEventHandler__, (Delegate)value);
+            }
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            remove
+            {
+                this.unhandledExceptionEventHandler__ = (UnhandledExceptionEventHandler)Delegate.Remove((Delegate)this.unhandledExceptionEventHandler__, (Delegate)value);
+            }
+        }
 
 #if NANOCLR_REFLECTION
         /// <summary>
