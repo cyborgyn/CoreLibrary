@@ -36,6 +36,10 @@ namespace System
 
 #endif // NANOCLR_REFLECTION
 
+        // IL2C internal usage
+        private global::IL2C_RUNTIME_TYPE elementType__;
+        private IntPtr length;
+
         /// <summary>
         /// Copies a range of elements from an Array starting at the first element and pastes them into another Array starting at the first element. The length is specified as a 32-bit integer.
         /// </summary>
