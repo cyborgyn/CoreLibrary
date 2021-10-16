@@ -181,6 +181,7 @@
     <Compile Include="System\Runtime\CompilerServices\RuntimeHelpers.cs" />
     <Compile Include="System\Runtime\InteropServices\Attributes.cs" />
     <Compile Include="System\Runtime\InteropServices\CharSet.cs" />
+    <Compile Include="System\Runtime\InteropServices\CompilationOption.cs" />
     <Compile Include="System\Runtime\InteropServices\LayoutKind.cs" />
     <Compile Include="System\Runtime\InteropServices\NativeAttribute.cs" />
     <Compile Include="System\Runtime\InteropServices\NativeCharSet.cs" />
@@ -226,6 +227,7 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="System\WeakReference.cs" />
+    <Compile Include="wchar_t.cs" />
   </ItemGroup>
   <ItemGroup>
     <NFMDP_PE_ExcludeClassByName Include="System.AttributeTargets">

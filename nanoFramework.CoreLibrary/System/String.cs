@@ -8,6 +8,8 @@ namespace System
 {
     using Runtime.CompilerServices;
     using System.Collections;
+    using System.Runtime.InteropServices;
+
     /// <summary>
     /// Represents text as a sequence of UTF-16 code units.
     /// </summary>
@@ -23,6 +25,9 @@ namespace System
 #pragma warning restore CS0661 // Type defines operator == or operator != but does not override Object.GetHashCode()
 #pragma warning restore CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
     {
+        [NativeValue("wchar_t*")]
+        private global::wchar_t string_body__;
+
         /// <summary>
         /// **Not supported in NanoFramework**  
         /// Return an enumerator that iterate on each char of the string.

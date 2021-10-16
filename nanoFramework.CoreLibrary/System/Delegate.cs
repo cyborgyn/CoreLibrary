@@ -7,6 +7,8 @@ namespace System
 {
     using Reflection;
     using Runtime.CompilerServices;
+    using System.Runtime.InteropServices;
+
     /// <summary>
     /// Represents a delegate, which is a data structure that refers to a static method or to a class instance and an instance method of that class.
     /// </summary>
