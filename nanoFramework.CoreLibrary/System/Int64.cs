@@ -7,10 +7,12 @@
 namespace System
 {
     using Globalization;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Represents a 64-bit signed integer.
     /// </summary>
+    [NativeType("int64_t")]
     [Serializable]
     public struct Int64
     {

@@ -8,10 +8,12 @@ namespace System
 {
     using Globalization;
     using System.Runtime.CompilerServices;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Represents a single-precision floating-point number.
     /// </summary>
+    [NativeType("float")]
     [Serializable]
     public struct Single
     {

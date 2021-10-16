@@ -7,10 +7,12 @@
 namespace System
 {
     using Globalization;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Represents an 8-bit unsigned integer.
     /// </summary>
+    [NativeType("uint8_t")]
     [Serializable]
     public struct Byte
     {

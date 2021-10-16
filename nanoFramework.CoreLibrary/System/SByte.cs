@@ -7,10 +7,12 @@
 namespace System
 {
     using Globalization;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Represents an 8-bit signed integer.
     /// </summary>
+    [NativeType("int8_t")]
     [Serializable, CLSCompliant(false)]
     public struct SByte
     {

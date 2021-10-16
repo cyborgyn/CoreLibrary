@@ -8,10 +8,12 @@ namespace System
 {
     using Globalization;
     using Runtime.CompilerServices;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Represents a double-precision floating-point number.
     /// </summary>
+    [NativeType("double")]
     [Serializable]
     public struct Double
     {

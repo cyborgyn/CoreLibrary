@@ -7,10 +7,12 @@
 namespace System
 {
     using Globalization;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Represents a 32-bit unsigned integer.
     /// </summary>
+    [NativeType("uint32_t")]
     [Serializable, CLSCompliant(false)]
     public struct UInt32
     {

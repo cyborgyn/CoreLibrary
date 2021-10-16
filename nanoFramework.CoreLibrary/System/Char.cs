@@ -4,11 +4,14 @@
 // See LICENSE file in the project root for full license information.
 //
 
+using System.Runtime.InteropServices;
+
 namespace System
 {
     /// <summary>
     /// Represents a character as a UTF-16 code unit.
     /// </summary>
+    [NativeType("wchar_t")]
     [Serializable]
     public struct Char
     {

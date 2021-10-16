@@ -7,10 +7,12 @@
 namespace System
 {
     using Globalization;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Represents a 16-bit signed integer.
     /// </summary>
+    [NativeType("int16_t")]
     [Serializable]
     public struct Int16
     {
