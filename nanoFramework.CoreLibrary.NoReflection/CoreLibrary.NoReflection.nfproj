@@ -88,6 +88,7 @@
     <Compile Include="..\nanoFramework.CoreLibrary\System\Collections\ArrayList.cs" Link="System\Collections\ArrayList.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Collections\ICollection.cs" Link="System\Collections\ICollection.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Collections\IComparer.cs" Link="System\Collections\IComparer.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Collections\IDictionary.cs" Link="System\Collections\IDictionary.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Collections\IEnumerable.cs" Link="System\Collections\IEnumerable.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Collections\IEnumerator.cs" Link="System\Collections\IEnumerator.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Collections\IEqualityComparer.cs" Link="System\Collections\IEqualityComparer.cs" />
@@ -184,6 +185,12 @@
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\Attributes.cs" Link="System\InteropServices\Attributes.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\CharSet.cs" Link="System\InteropServices\CharSet.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\LayoutKind.cs" Link="System\InteropServices\LayoutKind.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeAttribute.cs" Link="System\Runtime\InteropServices\NativeAttribute.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeCharSet.cs" Link="System\Runtime\InteropServices\NativeCharSet.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeMethodAttribute.cs" Link="System\Runtime\InteropServices\NativeMethodAttribute.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativePointer.cs" Link="System\Runtime\InteropServices\NativePointer.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeTypeAttribute.cs" Link="System\Runtime\InteropServices\NativeTypeAttribute.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeValueAttribute.cs" Link="System\Runtime\InteropServices\NativeValueAttribute.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\Remoting\RemotingServices.cs" Link="System\Remoting\RemotingServices.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\Remoting\__TransparentProxy.cs" Link="System\Remoting\__TransparentProxy.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\SByte.cs" Link="System\SByte.cs" />

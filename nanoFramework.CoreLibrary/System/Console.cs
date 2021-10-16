@@ -5,10 +5,21 @@
 
 namespace System
 {
-    internal static class Console
+    /// <summary>
+    /// Accessor for console streams
+    /// </summary>
+    public static class Console
     {
-        internal static void Write(string value) => Diagnostics.Debug.WriteLineNative(value, false);
+        /// <summary>
+        /// Put string onto output stream, without new line in the end
+        /// </summary>
+        /// <param name="value"></param>
+        public static void Write(string value) => Diagnostics.Debug.WriteLineNative(value, false);
 
-        internal static void WriteLine(string value) => Diagnostics.Debug.WriteLineNative(value, true);
+        /// <summary>
+        /// Put string onto output stream, with new line in the end
+        /// </summary>
+        /// <param name="value"></param>
+        public static void WriteLine(string value) => Diagnostics.Debug.WriteLineNative(value, true);
     }
 }
