@@ -4,8 +4,6 @@
 // See LICENSE file in the project root for full license information.
 //
 
-#if NANOCLR_REFLECTION
-
 namespace System
 {
     
@@ -17,9 +15,15 @@ namespace System
     /// </summary>
     /// <remarks>Available only in mscorlib build with support for System.Reflection.</remarks>
     [Serializable]
+#if NANOCLR_REFLECTION
     public abstract class Type : MemberInfo, IReflect
+#else
+    public class Type
+#endif
     {
+        private global::IL2C_RUNTIME_TYPE type__;
 
+#if NANOCLR_REFLECTION
         /// <summary>
         /// Gets the type that declares the current nested type or generic type parameter.
         /// </summary>
@@ -103,19 +107,6 @@ namespace System
         public static extern Type GetTypeFromHandle(RuntimeTypeHandle handle);
 
         /// <summary>
-        /// Gets the fully qualified name of the type, including its namespace but not its assembly.
-        /// </summary>
-        /// <value>
-        /// The fully qualified name of the type, including its namespace but not its assembly; or null if the current instance represents
-        /// a generic type parameter, an array type, pointer type, or byref type based on a type parameter, or a generic type that is not 
-        /// a generic type definition but contains unresolved type parameters.
-        /// </value>
-        public abstract String FullName
-        {
-            get;
-        }
-
-        /// <summary>
         /// Gets the assembly-qualified name of the type, which includes the name of the assembly from which this Type object was loaded.
         /// </summary>
         /// <value>
@@ -125,6 +116,21 @@ namespace System
         {
             get;
         }
+#endif
+
+        /// <summary>
+        /// Gets the fully qualified name of the type, including its namespace but not its assembly.
+        /// </summary>
+        /// <value>
+        /// The fully qualified name of the type, including its namespace but not its assembly; or null if the current instance represents
+        /// a generic type parameter, an array type, pointer type, or byref type based on a type parameter, or a generic type that is not 
+        /// a generic type definition but contains unresolved type parameters.
+        /// </value>
+        public extern String FullName
+        {
+            [MethodImpl(MethodImplOptions.InternalCall)]
+            get;
+        }
 
         /// <summary>
         /// Gets the type from which the current Type directly inherits.
@@ -132,11 +138,13 @@ namespace System
         /// <value>
         /// The Type from which the current Type directly inherits, or null if the current Type represents the Object class or an interface.
         /// </value>
-        public abstract Type BaseType
+        public extern Type BaseType
         {
+            [MethodImpl(MethodImplOptions.InternalCall)]
             get;
         }
 
+#if NANOCLR_REFLECTION
         /// <summary>
         /// Searches for a public instance constructor whose parameters match the types in the specified array.
         /// </summary>
@@ -387,15 +395,6 @@ namespace System
         [MethodImpl(MethodImplOptions.InternalCall)]
         public virtual extern bool IsInstanceOfType(Object o);
 
-        /// <summary>
-        /// Returns a String representing the name of the current Type.
-        /// </summary>
-        /// <returns>A String representing the name of the current Type.</returns>
-        public override String ToString()
-        {
-            return FullName;
-        }
-
         private const BindingFlags DefaultLookup = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public;
 
         private static string ParseTypeName(String typeName, ref String assemblyString)
@@ -433,7 +432,38 @@ namespace System
 
             return name;
         }
+#endif
+
+        /// <summary>
+        /// Returns a String representing the name of the current Type.
+        /// </summary>
+        /// <returns>A String representing the name of the current Type.</returns>
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern override string ToString();
+
+        /// <summary>
+        /// Override of GetHashCode()
+        /// </summary>
+        /// <returns></returns>
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern override int GetHashCode();
+
+        /// <summary>
+        /// Redirect to type aware Equals
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            return this.Equals((Type)obj);
+        }
+
+        /// <summary>
+        /// Compare an other Type to this
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern bool Equals(Type obj);
     }
 }
-
-#endif // NANOCLR_REFLECTION

@@ -7,10 +7,12 @@
 namespace System
 {
     using Runtime.CompilerServices;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Represents a multicast delegate; that is, a delegate that can have more than one element in its invocation list.
     /// </summary>
+    [NativeType("System_Delegate", SymbolName = "System_Delegate")]
     [Serializable]
 #pragma warning disable CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
 #pragma warning disable CS0661 // Type defines operator == or operator != but does not override Object.GetHashCode()

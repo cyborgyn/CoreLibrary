@@ -14,7 +14,7 @@ namespace System
     [Serializable]
     public class Exception
     {
-        private readonly string _message;
+        private readonly string message__;
         private readonly Exception _innerException;
 
         // this field is required in the native end
@@ -41,7 +41,7 @@ namespace System
         /// <param name="message">The message that describes the error. </param>
         public Exception(String message)
         {
-            _message = message;
+            message__ = message;
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace System
         /// <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified. </param>
         public Exception(String message, Exception innerException)
         {
-            _message = message;
+            message__ = message;
             _innerException = innerException;
         }
 
@@ -66,12 +66,12 @@ namespace System
             get
             {
 #if NANOCLR_REFLECTION
-                if (_message == null) return "Exception was thrown: " + GetType().FullName;
+                if (message__ == null) return "Exception was thrown: " + GetType().FullName;
 #else
-                if (_message == null) return "Exception was thrown";
+                if (message__ == null) return "Exception was thrown";
 #endif // NANOCLR_REFLECTION
 
-                return _message;
+                return message__;
             }
         }
 

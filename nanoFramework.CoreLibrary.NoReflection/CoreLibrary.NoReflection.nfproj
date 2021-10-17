@@ -178,13 +178,13 @@
     <Compile Include="..\nanoFramework.CoreLibrary\System\RuntimeTypeHandle.cs" Link="System\RuntimeTypeHandle.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\AccessedThroughPropertyAttribute.cs" Link="System\Runtime\CompilerServices\AccessedThroughPropertyAttribute.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\ExtensionAttribute.cs" Link="System\Runtime\CompilerServices\ExtensionAttribute.cs" />
-    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\IndexerNameAttribute.cs" Link="System\CompilerServices\IndexerNameAttribute.cs" />
-    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\InternalsVisibleToAttribute.cs" Link="System\CompilerServices\InternalsVisibleToAttribute.cs" />
-    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\MethodImplAttribute.cs" Link="System\CompilerServices\MethodImplAttribute.cs" />
-    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\RuntimeHelpers.cs" Link="System\CompilerServices\RuntimeHelpers.cs" />
-    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\Attributes.cs" Link="System\InteropServices\Attributes.cs" />
-    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\CharSet.cs" Link="System\InteropServices\CharSet.cs" />
-    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\LayoutKind.cs" Link="System\InteropServices\LayoutKind.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\IndexerNameAttribute.cs" Link="System\Runtime\CompilerServices\IndexerNameAttribute.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\InternalsVisibleToAttribute.cs" Link="System\Runtime\CompilerServices\InternalsVisibleToAttribute.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\MethodImplAttribute.cs" Link="System\Runtime\CompilerServices\MethodImplAttribute.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\RuntimeHelpers.cs" Link="System\Runtime\CompilerServices\RuntimeHelpers.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\Attributes.cs" Link="System\Runtime\InteropServices\Attributes.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\CharSet.cs" Link="System\Runtime\InteropServices\CharSet.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\LayoutKind.cs" Link="System\Runtime\InteropServices\LayoutKind.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeAttribute.cs" Link="System\Runtime\InteropServices\NativeAttribute.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeCharSet.cs" Link="System\Runtime\InteropServices\NativeCharSet.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeMethodAttribute.cs" Link="System\Runtime\InteropServices\NativeMethodAttribute.cs" />

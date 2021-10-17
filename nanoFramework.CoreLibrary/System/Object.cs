@@ -45,10 +45,8 @@ namespace System
         /// Returns a string that represents the current object.
         /// </summary>
         /// <returns>A string that represents the current object.</returns>
-        public virtual String ToString()
-        {
-            throw new NotImplementedException();
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern virtual String ToString();
 #endif // NANOCLR_REFLECTION
 
         /// <summary>
@@ -96,8 +94,6 @@ namespace System
         [MethodImpl(MethodImplOptions.InternalCall)]
         public virtual extern int GetHashCode();
 
-#if NANOCLR_REFLECTION
-
         /// <summary>
         /// Gets the Type of the current instance.
         /// </summary>
@@ -105,8 +101,6 @@ namespace System
         /// <remarks>Available only in mscorlib build with support for System.Reflection.</remarks>
         [MethodImpl(MethodImplOptions.InternalCall)]
         public extern Type GetType();
-
-#endif // NANOCLR_REFLECTION
 
         /// <summary>
         /// Creates a shallow copy of the current Object.

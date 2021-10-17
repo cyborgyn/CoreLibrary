@@ -4,11 +4,14 @@
 // See LICENSE file in the project root for full license information.
 //
 
+using System.Runtime.InteropServices;
+
 namespace System
 {
     /// <summary>
     /// Represents a Boolean value.
     /// </summary>
+    [NativeType("bool")]
     [Serializable]
     public struct Boolean
     {
