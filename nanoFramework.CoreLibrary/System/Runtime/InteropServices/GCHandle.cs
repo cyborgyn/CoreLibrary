@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 namespace System.Runtime.InteropServices
 {
     [NativeType("intptr_t", SymbolName = "intptr_t")]
-    public class GCHandle
+    public struct GCHandle
     {
         public Object Target
         {

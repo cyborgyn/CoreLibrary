@@ -9,8 +9,8 @@ namespace System
     [Serializable]
     public class UnhandledExceptionEventArgs : EventArgs
     {
-        private object _Exception;
-        private bool _IsTerminating;
+        private object exception__;
+        private bool isTerminating__;
 
         /// <summary>
         /// Constructor
@@ -19,8 +19,8 @@ namespace System
         /// <param name="isTerminating">Flag if application is terminating</param>
         public UnhandledExceptionEventArgs(object exception, bool isTerminating) : base()
         {
-            this._Exception = exception;
-            this._IsTerminating = isTerminating;
+            this.exception__ = exception;
+            this.isTerminating__ = isTerminating;
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace System
         {
             get
             {
-                return this._Exception;
+                return this.exception__;
             }
         }
 
@@ -41,7 +41,7 @@ namespace System
         {
             get
             {
-                return this._IsTerminating;
+                return this.isTerminating__;
             }
         }
     }
