@@ -21,6 +21,7 @@ using System;
 
 namespace System.Runtime.InteropServices
 {
+    [NativeType("void*", SymbolName = "void*")]
     public struct NativePointer
     {
         private readonly IntPtr pointer;
