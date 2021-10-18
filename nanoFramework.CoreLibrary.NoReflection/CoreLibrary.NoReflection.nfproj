@@ -184,6 +184,8 @@
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\CompilerServices\RuntimeHelpers.cs" Link="System\Runtime\CompilerServices\RuntimeHelpers.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\Attributes.cs" Link="System\Runtime\InteropServices\Attributes.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\CharSet.cs" Link="System\Runtime\InteropServices\CharSet.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\GCHandle.cs" Link="System\Runtime\InteropServices\GCHandle.cs" />
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\GCHandleType.cs" Link="System\Runtime\InteropServices\GCHandleType.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\LayoutKind.cs" Link="System\Runtime\InteropServices\LayoutKind.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeAttribute.cs" Link="System\Runtime\InteropServices\NativeAttribute.cs" />
     <Compile Include="..\nanoFramework.CoreLibrary\System\Runtime\InteropServices\NativeCharSet.cs" Link="System\Runtime\InteropServices\NativeCharSet.cs" />
@@ -239,6 +241,7 @@
     <Compile Include="..\nanoFramework.CoreLibrary\wchar_t.cs">
       <Link>wchar_t.cs</Link>
     </Compile>
+    <Compile Include="..\nanoFramework.CoreLibrary\System\Threading\ParameterizedThreadStart.cs" Link="System\Threading\ParameterizedThreadStart.cs" />
     <Compile Include="void.cs" />
   </ItemGroup>
   <ItemGroup>
