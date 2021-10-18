@@ -4,8 +4,6 @@
 // See LICENSE file in the project root for full license information.
 //
 
-#if NANOCLR_REFLECTION
-
 namespace System
 {
     /// <summary>
@@ -23,5 +21,3 @@ namespace System
         String ToString(String format, IFormatProvider formatProvider);
     }
 }
-
-#endif // NANOCLR_REFLECTION

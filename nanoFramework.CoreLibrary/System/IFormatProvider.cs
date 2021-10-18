@@ -4,8 +4,6 @@
 // See LICENSE file in the project root for full license information.
 //
 
-#if NANOCLR_REFLECTION
-
 namespace System
 {
     /// <summary>
@@ -22,6 +20,4 @@ namespace System
         Object GetFormat(Type formatType);
     }
 }
-
-#endif // NANOCLR_REFLECTION
 
