@@ -239,6 +239,7 @@
     <Compile Include="..\nanoFramework.CoreLibrary\wchar_t.cs">
       <Link>wchar_t.cs</Link>
     </Compile>
+    <Compile Include="void.cs" />
   </ItemGroup>
   <ItemGroup>
     <NFMDP_PE_ExcludeClassByName Include="System.AttributeTargets">

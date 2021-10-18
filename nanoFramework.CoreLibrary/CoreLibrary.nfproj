@@ -227,6 +227,7 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="System\WeakReference.cs" />
+    <Compile Include="void.cs" />
     <Compile Include="wchar_t.cs" />
   </ItemGroup>
   <ItemGroup>

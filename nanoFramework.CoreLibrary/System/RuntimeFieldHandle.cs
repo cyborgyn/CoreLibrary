@@ -4,6 +4,8 @@
 // See LICENSE file in the project root for full license information.
 //
 
+using System.Runtime.InteropServices;
+
 namespace System
 {
     /// <summary>
@@ -12,5 +14,8 @@ namespace System
     [Serializable]
     public struct RuntimeFieldHandle
     {
+        internal UIntPtr size__;
+        [NativeValue("const void*", SymbolName = "const void*")]
+        internal global::@void field__;
     }
 }
